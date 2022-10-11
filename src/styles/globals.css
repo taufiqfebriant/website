@@ -3,9 +3,9 @@
 @tailwind utilities;
 
 @font-face {
-	font-family: "Inter";
+	font-family: 'Inter';
 	font-style: normal;
 	font-weight: 100 900;
 	font-display: optional;
-	src: url("/fonts/Inter-VariableFont_slnt,wght.woff2") format("woff2");
+	src: url('/fonts/Inter-VariableFont_slnt,wght.woff2') format('woff2');
 }

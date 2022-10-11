@@ -1,20 +1,20 @@
-import { Tab } from "@headlessui/react";
-import clsx from "clsx";
-import { Fragment } from "react";
+import { Tab } from '@headlessui/react';
+import clsx from 'clsx';
+import { Fragment } from 'react';
 
 const projects = [
 	{
-		name: "underlib",
+		name: 'underlib',
 		description:
-			"Website for finding Spotify playlists with tags for better discoverability",
-		href: "https://www.underlib.com",
-		repository: "https://github.com/taufiqfebriant/underlib",
+			'Website for finding Spotify playlists with tags for better discoverability',
+		href: 'https://www.underlib.com',
+		repository: 'https://github.com/taufiqfebriant/underlib',
 	},
 	{
-		name: "kamoos",
-		description: "Indonesian version of Urban Dictionary",
-		href: "https://kamoos.club",
-		repository: "https://github.com/taufiqfebriant/kamoos",
+		name: 'kamoos',
+		description: 'Indonesian version of Urban Dictionary',
+		href: 'https://kamoos.club',
+		repository: 'https://github.com/taufiqfebriant/kamoos',
 	},
 ];
 
@@ -26,11 +26,11 @@ const CustomTabs = () => {
 					{({ selected }) => (
 						<button
 							className={clsx(
-								"px-4 py-2 font-medium transition-colors",
+								'px-4 py-2 font-medium transition-colors',
 								{
-									"border-b border-[#f5f5f5] text-[#f5f5f5]": selected,
+									'border-b border-[#f5f5f5] text-[#f5f5f5]': selected,
 								},
-								{ "hover:text-[#f5f5f5] text-[#888]": !selected }
+								{ 'text-[#888] hover:text-[#f5f5f5]': !selected }
 							)}
 						>
 							Projects
@@ -41,11 +41,11 @@ const CustomTabs = () => {
 					{({ selected }) => (
 						<button
 							className={clsx(
-								"px-4 py-2 font-medium transition-colors",
+								'px-4 py-2 font-medium transition-colors',
 								{
-									"border-b border-[#f5f5f5] text-[#f5f5f5]": selected,
+									'border-b border-[#f5f5f5] text-[#f5f5f5]': selected,
 								},
-								{ "hover:text-[#f5f5f5] text-[#888]": !selected }
+								{ 'text-[#888] hover:text-[#f5f5f5]': !selected }
 							)}
 						>
 							Contact
@@ -55,13 +55,13 @@ const CustomTabs = () => {
 			</Tab.List>
 			<Tab.Panels className="mt-4">
 				<Tab.Panel className="flex flex-col gap-y-4">
-					{projects.map((project) => (
+					{projects.map(project => (
 						<article
 							key={project.name}
-							className="border border-[#232b2b] rounded-md h-36 flex items-center"
+							className="flex h-36 items-center rounded-md border border-[#232b2b]"
 						>
 							<div className="px-4">
-								<h1 className="text-[#f5f5f5] font-bold text-2xl">
+								<h1 className="text-2xl font-bold text-[#f5f5f5]">
 									{project.name}
 								</h1>
 
@@ -72,7 +72,7 @@ const CustomTabs = () => {
 										href={project.href}
 										target="_blank"
 										rel="noreferrer"
-										className="hover:underline text-[#1d9bf0]"
+										className="text-[#1d9bf0] underline"
 									>
 										Go to website
 									</a>
@@ -81,7 +81,7 @@ const CustomTabs = () => {
 										href={project.repository}
 										target="_blank"
 										rel="noreferrer"
-										className="hover:underline text-[#1d9bf0]"
+										className="text-[#1d9bf0] underline"
 									>
 										GitHub repository
 									</a>
@@ -90,38 +90,38 @@ const CustomTabs = () => {
 						</article>
 					))}
 				</Tab.Panel>
-				<Tab.Panel className="text-[#f5f5f5] px-4">
+				<Tab.Panel className="px-4 text-[#f5f5f5]">
 					<p>
 						If you want to talk about something, feel free to contact me. You
 						can:
 					</p>
-					<ul className="list-disc list-inside">
+					<ul className="list-inside list-disc">
 						<li>
-							DM me on{" "}
+							DM me on{' '}
 							<a
 								href="https://twitter.com/taufiqfebriant"
 								target="_blank"
 								rel="noreferrer"
-								className="hover:underline text-[#1d9bf0]"
+								className="text-[#1d9bf0] underline"
 							>
 								Twitter
-							</a>{" "}
-							or{" "}
+							</a>{' '}
+							or{' '}
 							<a
 								href="https://www.linkedin.com/in/taufiqfebriant"
 								target="_blank"
 								rel="noreferrer"
-								className="hover:underline text-[#1d9bf0]"
+								className="text-[#1d9bf0] underline"
 							>
 								LinkedIn
 							</a>
 						</li>
 
 						<li>
-							Email me at{" "}
+							Email me at{' '}
 							<a
 								href="mailto:hello@taufiq.co.id"
-								className="hover:underline text-[#1d9bf0]"
+								className="text-[#1d9bf0] underline"
 							>
 								hello@taufiq.co.id
 							</a>
