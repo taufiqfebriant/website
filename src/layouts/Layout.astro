@@ -56,25 +56,10 @@ const meta = {
 		/>
 
 		<title>{title}</title>
-
-		<!-- <SEO
-			title={title}
-			description="Web Developer from Indonesia"
-			openGraph={{
-				basic: {
-					title: 'Muhammad Taufiq Febrianto is a Web Developer from Indonesia',
-					type: 'website',
-					image: `${import.meta.env.SITE}/images/banner.png`,
-					url: import.meta.env.SITE,
-				},
-				image: {
-					alt: "A banner containing Taufiq's profile picture, his full name, and his title",
-				},
-			}}
-
-		/> -->
 	</head>
-	<body class="bg-black max-w-2xl mx-auto py-10 text-[#f5f5f5] antialiased">
+	<body
+		class="bg-black max-w-2xl mx-auto py-10 text-[#f5f5f5] antialiased px-4 md:px-0"
+	>
 		<slot />
 	</body>
 </html>

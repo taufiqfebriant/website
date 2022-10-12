@@ -60,7 +60,7 @@ const CustomTabs = () => {
 							className="flex h-36 items-center rounded-md border border-[#232b2b]"
 						>
 							<div className="px-4">
-								<h1 className="text-2xl font-bold text-[#f5f5f5]">
+								<h1 className="text-xl md:text-2xl font-bold text-[#f5f5f5]">
 									{project.name}
 								</h1>
 
