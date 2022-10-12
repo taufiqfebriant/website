@@ -5,14 +5,13 @@ import { Fragment } from 'react';
 const projects = [
 	{
 		name: 'underlib',
-		description:
-			'Website for finding Spotify playlists with tags for better discoverability',
+		description: 'Find Spotify playlists with tags for better discoverability',
 		href: 'https://www.underlib.com',
 		repository: 'https://github.com/taufiqfebriant/underlib',
 	},
 	{
 		name: 'kamoos',
-		description: 'Indonesian version of Urban Dictionary',
+		description: 'The Indonesian version of Urban Dictionary',
 		href: 'https://kamoos.club',
 		repository: 'https://github.com/taufiqfebriant/kamoos',
 	},
@@ -120,10 +119,10 @@ const CustomTabs = () => {
 						<li>
 							Email me at{' '}
 							<a
-								href="mailto:hello@taufiq.co.id"
+								href="mailto:hello@taufiqf.com"
 								className="text-[#1d9bf0] underline"
 							>
-								hello@taufiq.co.id
+								hello@taufiqf.com
 							</a>
 						</li>
 					</ul>
