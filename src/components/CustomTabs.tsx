@@ -11,7 +11,7 @@ const projects = [
 	},
 	{
 		name: 'kamoos',
-		description: 'The Indonesian version of Urban Dictionary',
+		description: 'The Indonesian version of "Urban Dictionary" website',
 		href: 'https://kamoos.club',
 		repository: 'https://github.com/taufiqfebriant/kamoos',
 	},
