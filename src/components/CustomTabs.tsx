@@ -17,6 +17,28 @@ const projects = [
 	},
 ];
 
+const links = [
+	{
+		href: 'https://github.com/taufiqfebriant',
+		name: 'GitHub',
+	},
+	{
+		href: 'https://dribbble.com/taufiqfebriant',
+		name: 'Dribbble',
+	},
+	{
+		href: 'https://www.linkedin.com/in/taufiqfebriant',
+		name: 'LinkedIn',
+	},
+	{
+		href: 'https://twitter.com/taufiqfebriant',
+		name: 'Twitter',
+	},
+];
+
+const twitterLink = links.find(link => link.name === 'Twitter');
+const linkedinLink = links.find(link => link.name === 'LinkedIn');
+
 const CustomTabs = () => {
 	return (
 		<Tab.Group>
@@ -33,6 +55,21 @@ const CustomTabs = () => {
 							)}
 						>
 							Projects
+						</button>
+					)}
+				</Tab>
+				<Tab as={Fragment}>
+					{({ selected }) => (
+						<button
+							className={clsx(
+								'px-4 py-2 font-medium transition-colors',
+								{
+									'border-b border-[#f5f5f5] text-[#f5f5f5]': selected,
+								},
+								{ 'text-[#888] hover:text-[#f5f5f5]': !selected }
+							)}
+						>
+							Links
 						</button>
 					)}
 				</Tab>
@@ -71,7 +108,7 @@ const CustomTabs = () => {
 										href={project.href}
 										target="_blank"
 										rel="noreferrer"
-										className="text-[#1d9bf0] underline"
+										className="underline"
 									>
 										Go to website
 									</a>
@@ -80,7 +117,7 @@ const CustomTabs = () => {
 										href={project.repository}
 										target="_blank"
 										rel="noreferrer"
-										className="text-[#1d9bf0] underline"
+										className="underline"
 									>
 										GitHub repository
 									</a>
@@ -89,7 +126,21 @@ const CustomTabs = () => {
 						</article>
 					))}
 				</Tab.Panel>
-				<Tab.Panel className="px-4 text-[#f5f5f5]">
+				<Tab.Panel as="ul" className="px-4 list-inside list-disc">
+					{links.map(link => (
+						<li key={link.name}>
+							<a
+								href={link.href}
+								target="_blank"
+								rel="noreferrer"
+								className="underline"
+							>
+								{link.name}
+							</a>
+						</li>
+					))}
+				</Tab.Panel>
+				<Tab.Panel className="px-4">
 					<p>
 						If you want to talk about something, feel free to contact me. You
 						can:
@@ -98,30 +149,27 @@ const CustomTabs = () => {
 						<li>
 							DM me on{' '}
 							<a
-								href="https://twitter.com/taufiqfebriant"
+								href={twitterLink?.href}
 								target="_blank"
 								rel="noreferrer"
-								className="text-[#1d9bf0] underline"
+								className="underline"
 							>
-								Twitter
+								{twitterLink?.name}
 							</a>{' '}
 							or{' '}
 							<a
-								href="https://www.linkedin.com/in/taufiqfebriant"
+								href={linkedinLink?.href}
 								target="_blank"
 								rel="noreferrer"
-								className="text-[#1d9bf0] underline"
+								className="underline"
 							>
-								LinkedIn
+								{linkedinLink?.name}
 							</a>
 						</li>
 
 						<li>
 							Email me at{' '}
-							<a
-								href="mailto:hello@taufiqf.com"
-								className="text-[#1d9bf0] underline"
-							>
+							<a href="mailto:hello@taufiqf.com" className="underline">
 								hello@taufiqf.com
 							</a>
 						</li>
