@@ -113,36 +113,34 @@ const CustomTabs = () => {
 					{projects.map(project => (
 						<article
 							key={project.name}
-							className="flex h-36 items-center rounded-md border border-[#232b2b]"
+							className="rounded-md border border-[#232b2b] py-6 px-4"
 						>
-							<div className="px-4">
-								<h1 className="text-xl md:text-2xl font-bold text-[#f5f5f5]">
-									{project.name}
-								</h1>
+							<h1 className="text-xl md:text-2xl font-bold text-[#f5f5f5]">
+								{project.name}
+							</h1>
 
-								<p className="text-sm text-[#888]">{project.description}</p>
+							<p className="text-sm text-[#888]">{project.description}</p>
 
-								<div className="mt-4 flex gap-x-4 text-sm">
+							<div className="mt-4 flex gap-x-4 text-sm">
+								<a
+									href={project.href}
+									target="_blank"
+									rel="noreferrer"
+									className="underline"
+								>
+									Go to website
+								</a>
+
+								{project.repository ? (
 									<a
-										href={project.href}
+										href={project.repository}
 										target="_blank"
 										rel="noreferrer"
 										className="underline"
 									>
-										Go to website
+										GitHub repository
 									</a>
-
-									{project.repository ? (
-										<a
-											href={project.repository}
-											target="_blank"
-											rel="noreferrer"
-											className="underline"
-										>
-											GitHub repository
-										</a>
-									) : null}
-								</div>
+								) : null}
 							</div>
 						</article>
 					))}
