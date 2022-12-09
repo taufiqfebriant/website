@@ -2,7 +2,14 @@ import { Tab } from '@headlessui/react';
 import clsx from 'clsx';
 import { Fragment } from 'react';
 
-const projects = [
+type Project = {
+	name: string;
+	description: string;
+	href: string;
+	repository?: string;
+};
+
+const projects: Project[] = [
 	{
 		name: 'underlib',
 		description: 'Find Spotify playlists with tags for better discoverability',
@@ -15,7 +22,19 @@ const projects = [
 		href: 'https://kamoos.club',
 		repository: 'https://github.com/taufiqfebriant/kamoos',
 	},
-];
+	{
+		name: 'Rumah Cahaya FLP Saudi Arabia',
+		description:
+			'Rumah Cahaya FLP Saudi Arabia is a online library where people can read books anytime and anywhere.',
+		href: 'https://rumahcahayaflpsaudi.com',
+	},
+	{
+		name: 'Manajemen Kepatuhan',
+		description:
+			'Manajemen Kepatuhan is a web application for audit result records and follow-up monitoring.',
+		href: 'https://manajemenkepatuhan.com',
+	},
+] as const;
 
 const links = [
 	{
@@ -113,14 +132,16 @@ const CustomTabs = () => {
 										Go to website
 									</a>
 
-									<a
-										href={project.repository}
-										target="_blank"
-										rel="noreferrer"
-										className="underline"
-									>
-										GitHub repository
-									</a>
+									{project.repository ? (
+										<a
+											href={project.repository}
+											target="_blank"
+											rel="noreferrer"
+											className="underline"
+										>
+											GitHub repository
+										</a>
+									) : null}
 								</div>
 							</div>
 						</article>
