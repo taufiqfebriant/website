@@ -34,7 +34,7 @@ const projects: Project[] = [
 			'Manajemen Kepatuhan is a web application for audit result records and follow-up monitoring.',
 		href: 'https://manajemenkepatuhan.com',
 	},
-] as const;
+];
 
 const links = [
 	{
